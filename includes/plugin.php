@@ -18,7 +18,7 @@ class Plugin {
 
 			case 'plugin_url':
 				return plugin_dir_url( dirname( __FILE__ ) );
-			
+
 			case 'template_dir':
 				return plugin_dir_path( dirname( __FILE__ ) ) . '/templates';
 
