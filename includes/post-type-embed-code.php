@@ -50,7 +50,7 @@ class Post_Type_Embed_Code {
 			'labels' => array(
 				'name'               => 'Embed Codes',
 				'singular_name'      => 'Embed Code',
-				'all_items'          => 'All Embed Codes',
+				'all_items'          => 'Embed Codes',
 				'view_item'          => 'View Embed Code',
 				'add_new_item'       => 'Add New Embed Code',
 				'add_new'            => 'Add New',
@@ -64,7 +64,7 @@ class Post_Type_Embed_Code {
 			'public'              => false,
 			'exclude_from_search' => true,
 			'show_ui'             => ( empty( $can_edit ) ) ? false : true, // set this
-			'show_in_menu'        => ( empty( $can_edit ) ) ? false : true, // set this
+			'show_in_menu'        => ( empty( $can_edit ) ) ? false : 'tools.php', // set this
 			'show_in_nav_menus'   => ( empty( $can_edit ) ) ? false : true,
 			'menu_position'       => 20,
 			'hierarchical'        => false,
