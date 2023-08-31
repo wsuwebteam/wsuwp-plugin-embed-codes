@@ -30,7 +30,7 @@ class Post_Type_Embed_Code {
 
 		add_action( 'init', array( __CLASS__, 'register_post_type' ), 99 );
 
-		
+		add_filter( 'template_include', array( __CLASS__, 'filter_template' ) );
 
 		if ( is_admin() ) {
 
@@ -38,6 +38,18 @@ class Post_Type_Embed_Code {
 
 			add_action( 'save_post_' . self::$post_type, array( __CLASS__, 'save_embed_code' ), 10, 3 );
 		}
+
+	}
+
+	public static function filter_template( $template ) {
+
+		if ( is_singular( self::$post_type ) ) {
+
+			$template = Plugin::get( 'plugin_dir' ) . '/templates/post-view.php';
+
+		}
+
+		return $template;
 
 	}
 
@@ -61,8 +73,9 @@ class Post_Type_Embed_Code {
 				'not_found_in_trash' => 'Not found in Trash',
 			),
 			'description'         => 'WSU Content Embed Codes',
-			'public'              => false,
+			'public'              => true,
 			'exclude_from_search' => true,
+			'show_in_rest'        => true,
 			'show_ui'             => ( empty( $can_edit ) ) ? false : true, // set this
 			'show_in_menu'        => ( empty( $can_edit ) ) ? false : 'tools.php', // set this
 			'show_in_nav_menus'   => ( empty( $can_edit ) ) ? false : true,

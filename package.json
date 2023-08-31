@@ -1,0 +1,17 @@
+{
+  "name": "wsuwp-plugin-embed-codes",
+  "version": "1.0.0",
+  "description": "A WordPress plugin to add embed codes in WP.",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "wp-scripts start assets/src/index.js --output-path=assets/dist/",
+    "build": "wp-scripts build assets/src/index.js --output-path=assets/dist/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wordpress/scripts": "^26.2.0"
+  }
+}
