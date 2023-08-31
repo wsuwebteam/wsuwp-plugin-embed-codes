@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WSUWP Embed Codes
  * Description: Plugin allow embed codes for specific users.
- * Version: 1.0.1
+ * Version: 1.1.0
  * Requires PHP: 7.0
  * Author: Washington State University, Danial Bleile
  * Author URI: https://github.com/wsuwebteam/wsuwp-plugin-embed-codes
