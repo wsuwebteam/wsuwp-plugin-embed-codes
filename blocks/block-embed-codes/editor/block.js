@@ -26,7 +26,7 @@ registerBlockType("wsuwp/embed-code", {
     },
     isIframe: {
         type: "boolean",
-        default: false,
+        default: false, 
     },
     iframeTitle: {
         type: "string",
@@ -44,6 +44,10 @@ registerBlockType("wsuwp/embed-code", {
         type: "boolean",
         default: false,
     },
+    doBlocks: {
+      type: "boolean",
+      default: false,
+  },
     
   },
   edit: Edit,

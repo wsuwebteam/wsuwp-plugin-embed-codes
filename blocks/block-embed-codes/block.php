@@ -9,6 +9,7 @@ class Block_Embed_Code {
 		'embedId'      => '',
 		'embedTitle'   => '',
 		'url'          => '',
+		'doBlocks'     => false,
 		'isIframe'     => false,
 		'isIframe'     => false,
 		'iframeTitle'  => '',
@@ -55,7 +56,7 @@ class Block_Embed_Code {
 			}
 		}
 
-		return $content;
+		return ( $atts['doBlocks'] ) ? do_blocks( $content ) : $content;
 
 	}
 

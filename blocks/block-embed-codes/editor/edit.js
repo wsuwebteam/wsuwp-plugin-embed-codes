@@ -71,6 +71,12 @@ const edit = (props) => {
                 options={ embedCodes }
                 onChange={ ( embedId ) => setEmbedAttributes( embedId )}
             />
+            <ToggleControl
+                label='Render Blocks'
+                checked={ ( attributes.doBlocks ) }
+                onChange={ ( doBlocks ) => setAttributes( { doBlocks } )  }
+                help={ 'Render any block markup inside the embed code'}
+            />
            { ! attributes.isIframe && <ToggleControl
                 label='Wrap Embed Code'
                 checked={ ( attributes.wrap ) }

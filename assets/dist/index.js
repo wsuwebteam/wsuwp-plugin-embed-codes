@@ -55,6 +55,10 @@ registerBlockType("wsuwp/embed-code", {
     wrap: {
       type: "boolean",
       default: false
+    },
+    doBlocks: {
+      type: "boolean",
+      default: false
     }
   },
   edit: _edit__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -146,6 +150,13 @@ const edit = props => {
     value: attributes.embedId,
     options: embedCodes,
     onChange: embedId => setEmbedAttributes(embedId)
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
+    label: "Render Blocks",
+    checked: attributes.doBlocks,
+    onChange: doBlocks => setAttributes({
+      doBlocks
+    }),
+    help: 'Render any block markup inside the embed code'
   }), !attributes.isIframe && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
     label: "Wrap Embed Code",
     checked: attributes.wrap,
